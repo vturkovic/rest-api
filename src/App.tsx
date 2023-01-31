@@ -29,7 +29,7 @@ const App: React.FC = () => {
   }, []);
 
   const handlePostSelection = (post: ArticleInterface) => {
-    if (selectedPosts.find((selectedPost) => selectedPost.id === post.id)) {
+    if (selectedPosts.some((selectedPost) => selectedPost.id === post.id)) {
       setSelectedPosts(selectedPosts.filter((selectedPost) => selectedPost.id !== post.id));
     } else if (selectedPosts.length < 10) {
       setSelectedPosts([...selectedPosts, post]);
@@ -48,7 +48,7 @@ const App: React.FC = () => {
           <Col key={post.id} xs={12} sm={6} md={4} lg={2} className="mb-5">
             <button className="card-button-wrap" onClick={() => handlePostSelection(post)}>
               <Card
-                className={`${selectedPosts.find((selectedPost) => selectedPost.id === post.id) ? 'selected': ''}`}>
+                className={`${selectedPosts.some((selectedPost) => selectedPost.id === post.id) ? 'selected': ''}`}>
                 <Card.Body>
                   <Card.Title className="font-weight-bold text-center">
                     {post.title}
