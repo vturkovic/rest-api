@@ -1,16 +1,11 @@
-.selected {
-    background-color: rgb(165 226 255);
-}
-
-.button-wrap {
-    border: 0;
-    background-color: white;
-}
-
 .card-body {
     width: 300px;
     height: 300px;
+}
+
+.card-button-wrap {
     border: 0;
+    background-color: white;
 }
 
 .button-submit {
@@ -21,4 +16,8 @@
     display: flex;
     justify-content: center;
     width: 200px;
+}
+
+.selected {
+    background-color: rgb(165 226 255);
 }

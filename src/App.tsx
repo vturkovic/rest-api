@@ -46,9 +46,9 @@ const App: React.FC = () => {
       <div className="d-flex flex-wrap">
         {posts.map((post) => (
           <Col key={post.id} xs={12} sm={6} md={4} lg={2} className="mb-5">
-            <button className="button-wrap" onClick={() => handlePostSelection(post)}>
+            <button className="card-button-wrap" onClick={() => handlePostSelection(post)}>
               <Card
-                className={`${selectedPosts.find((selectedPost) => selectedPost.id === post.id)? 'selected': ''}`}>
+                className={`${selectedPosts.find((selectedPost) => selectedPost.id === post.id) ? 'selected': ''}`}>
                 <Card.Body>
                   <Card.Title className="font-weight-bold text-center">
                     {post.title}
